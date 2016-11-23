@@ -1,4 +1,4 @@
-\subsection{Beam line at Paul Scherrer Institute (PSI)}
+\subsection{General information}
 \begin{frame}
 	\frametitle{Beam line at Paul Scherrer Institute (PSI)}
 	\begin{itemize}
@@ -18,9 +18,8 @@
 	\end{figure}
 \end{frame}
 % ============================ new frame ==========================================>
-\subsection{Overview}
 \begin{frame}
-	\frametitle{Overview}
+	\frametitle{Measurements}
 	\begin{itemize}
 		\item performing several beam tests starting in $2013$
 		\item using a modular self-built beam telescope with two possible setups:
@@ -28,7 +27,7 @@
 				\item pad setup (testing whole diamonds as single pad detector)
 				\item pixel setup (testing diamond sensors implanted on CMS-Pixel Chips)
 			\end{itemize}
-		\item researching several materials and devices
+		\item investigating several materials and devices
 		\begin{itemize}
 			\item scCVD pad detectors (reproduce rate effect)
 			\item pCVD pad and pixel detectors
@@ -81,6 +80,36 @@
 	\end{figure}
 	\begin{itemize}
 		\item Trigger Unit to process the single triggers and provide global one for all devices
-		\item EUDAQ saves event based data stream as binary file
+		\item saving event based data stream as binary file using EUDAQ
+	\end{itemize}
+\end{frame}
+% ============================ new frame ==========================================>
+\subsection{Analysis and Results}
+\begin{frame}
+	\frametitle{Waveforms}
+	\vspace*{-20pt}
+	\begin{center}
+		\includegraphics[angle=270, width=.7\textwidth]{SignalWaveform}\\
+		\includegraphics[width=.7\textwidth]{SignalWaveforms5000}
+	\end{center}
+	\begin{itemize}
+		\item most frequented peak (\SI{\sim70}{ns}): triggered signal
+		\item other peaks originate from other buckets ($\rightarrow$ resolve beam structure of \SI{\approx19.7}{ns})
+		\item system does not allow signals in pre-signal bucket due to fastOR trigger deadtime
+	\end{itemize}
+\end{frame}
+% ============================ new frame ==========================================>
+\begin{frame}
+	\frametitle{Pulse Height Calculation}
+	\begin{center}
+		\includegraphics[angle=270, width=.8\textwidth]{intpeaks}\\
+	\end{center}
+	\begin{itemize}
+		\setlength{\itemsep}{\fill}
+		\item finding the peak in the signal region
+		\item integrating the signal in time fixed asymmetric integral around peak
+		\item same integration for pedestal (base line $\rightarrow$ noise)
+		\item optimising the integral width by highest SNR (Integral / Pedestal Sigma)
+		\item subtracting the pedestal from the signal integral on event-wise basis 
 	\end{itemize}
 \end{frame}

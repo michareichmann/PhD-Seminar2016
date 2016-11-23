@@ -10,7 +10,7 @@
 			\item \SI{\sim1.4}{\mega\watt} \ra most powerful proton accelerator in the world
 		\end{itemize}
 		\item using beam line $\uppi$M1 with \SI{260}{\mega\electronvolt} positive pions ($\uppi^+$)
-		\item tunable rate from \SI{2}{\kilo\hertz} to \SI{10}{\mega\hertz}
+		\item tunable particle fluxes from \SI{2}{\kilo\hertz\per cm^2} to \SI{10}{\mega\hertz\per cm^2}
 	\end{itemize}
 	\begin{figure}
 		\centering
@@ -112,4 +112,63 @@
 		\item optimising the integral width by highest SNR (Integral / Pedestal Sigma)
 		\item subtracting the pedestal from the signal integral on event-wise basis 
 	\end{itemize}
+\end{frame}
+% ============================ new frame ==========================================>
+\begin{frame}
+	\frametitle{Pulse Height Distribution and Signal Maps}
+	\vspace*{-7.5pt}
+	\def \sp {0.65\textwidth}
+	\begin{figure}
+		\centering
+		\begin{subfigure}{0.45\textwidth} 
+			\centering 
+			\includegraphics[angle=270, width=\sp]{sDisto}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth} 
+			\centering 
+			\includegraphics[angle=270, width=\sp]{pDisto}
+		\end{subfigure}
+	\end{figure}
+	\vspace*{-15pt}
+	\begin{figure}
+	\centering
+		\begin{subfigure}{0.45\textwidth} 
+			\centering 
+			\includegraphics[angle=270, width=\sp]{sSigMap}
+			\caption{single crystal}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth} 
+			\centering 
+			\includegraphics[angle=270, width=\sp]{pSigMap}
+			\caption{poly crystal}
+		\end{subfigure} 
+	\end{figure}
+\end{frame}
+% ============================ new frame ==========================================>
+\begin{frame}
+	\frametitle{Signal vs. Particle Flux}
+	\begin{minipage}[c][.75\textheight]{.5\textwidth}
+		\begin{itemize}
+			\setlength{\itemsep}{\fill}
+			\item after all analysis steps: look for rate dependence of pCVD diamonds
+			\item found diamond pad detectors that show no or very little dependence on rate
+			\item no dependence up to \SI{1e16}{neq\per cm^2}
+			\item large systematic errors due to reproducibility
+		\end{itemize}
+		\vspace*{3pt}
+		\textbf{To do:}
+		\begin{itemize}
+			\setlength{\itemsep}{\fill}
+			\item test higher irradiated samples
+			\item improve reproducibility
+			\item proof the same for pixel detectors
+		\end{itemize}
+	\end{minipage}
+	\hspace*{5pt}
+	\begin{minipage}{.45\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{rateplot}
+		\end{figure}
+	\end{minipage}
 \end{frame}
